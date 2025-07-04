@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  overflow: hidden;
+  height: 100vh;
+  font-family: Arial, sans-serif;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
+.telegram-button {
+  z-index: 2;
+  background: #0088cc;
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: 0 0 10px #00aaff;
+  transition: transform 0.3s ease;
+}
+
+.telegram-button:hover {
+  transform: scale(1.05);
+}
+
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  opacity: 0.2;
+}
+
+@keyframes moveBubble {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(var(--x), var(--y));
+  }
+}
